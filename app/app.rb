@@ -28,6 +28,7 @@ end
 
 class ProxyApp < Sinatra::Base
   get '/' do
+    headers 'Access-Control-Allow-Origin' => '*'
     content_type 'application/json'
     r = HTTParty.get(build_uri, :headers => { 'Accept' => '*/*' })
     r.body

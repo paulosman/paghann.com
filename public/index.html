@@ -14,7 +14,7 @@
           <a class="brand" href="#">Paghann</a>
           <ul class="nav">
             <li>{{#link-to 'details'}}Event Details{{/link-to}}</li>
-            <li>{{#link-to 'where-to-stay'}}Where to Stay{{/link-to}}</li>
+            <li>{{#link-to 'listings'}}Where to Stay{{/link-to}}</li>
             <li>{{#link-to 'register'}}Register{{/link-to}}</li>
           </ul>
         </div>
@@ -28,6 +28,17 @@
       <p><a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link" href="#">Register for Wedding</a></p>
       <p><a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link" href="#">Register for Reception</a></p>
 
+    </script>
+
+    <script type="text/x-handlebars" id="listings">
+      <h1>Listings</h1>
+      <ul>
+        {{#each}}
+        <li>
+          <a {{bindAttr href="permalink_url"}}>{{name}}</a>
+        </li>
+        {{/each}}
+      </ul>
     </script>
 
     <script src="http://guestlistapp.com/javascripts/guestlist-embed.js"></script>
