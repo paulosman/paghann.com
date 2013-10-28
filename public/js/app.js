@@ -1,5 +1,6 @@
 (function() {
-  LISTINGS_ENDPOINT = '/airbnb';
+  LISTINGS_ENDPOINT = 'http://localhost:4567';
+  AIRBNB_PROPERTY_URL = 'http://airbnb.com/rooms/';
 
   App = Ember.Application.create();
 
@@ -13,7 +14,8 @@
     model: function() {
       return $.getJSON(LISTINGS_ENDPOINT).then(function(data) {
         return data.properties.map(function(property) {
-          property.permalink_url = 'http://airbnb.com/rooms/' + property.id;
+          property.thumbnail_url = property.thumbnail_url.replace('small', 'large');
+          property.permalink_url = AIRBNB_PROPERTY_URL + property.id;
           return property;
         });
       });

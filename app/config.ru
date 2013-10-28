@@ -1,5 +1,5 @@
 require 'sinatra'
 
-require_relative 'app'
+require './app'
 
 ProxyApp.run!

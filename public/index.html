@@ -25,20 +25,30 @@
     <script type="text/x-handlebars" id="index">
       <h1>Meghann + Paul = Paghann</h1>
 
-      <p><a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link" href="#">Register for Wedding</a></p>
-      <p><a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link" href="#">Register for Reception</a></p>
-
     </script>
 
     <script type="text/x-handlebars" id="listings">
       <h1>Listings</h1>
-      <ul>
+      <div class="listings">
         {{#each}}
-        <li>
-          <a {{bindAttr href="permalink_url"}}>{{name}}</a>
-        </li>
+        <div class="listing">
+          <h2><a {{bindAttr href="permalink_url"}}>{{name}}</a></h2>
+          <img {{bindAttr src="thumbnail_url"}}>
+          <p>Price: ${{price}} USD / night</p>
+        </div>
         {{/each}}
-      </ul>
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" id="details">
+      <h1>Event Details</h1>
+    </script>
+
+    <script type="text/x-handlebars" id="register">
+      <h1>Register</h1>
+
+      <p><a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link" href="#">Register for Wedding</a></p>
+      <p><a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link" href="#">Register for Reception</a></p>
     </script>
 
     <script src="http://guestlistapp.com/javascripts/guestlist-embed.js"></script>

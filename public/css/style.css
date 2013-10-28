@@ -1,3 +1,8 @@
 body {
   font-family: sans-serif;
 }
+
+.listing img {
+  width: 256px;
+  height: 170.75px;
+}
