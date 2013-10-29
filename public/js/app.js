@@ -1,13 +1,14 @@
 (function() {
+
   LISTINGS_ENDPOINT = 'http://paghann.com/airbnb/';
   AIRBNB_PROPERTY_URL = 'http://airbnb.com/rooms/';
 
   App = Ember.Application.create();
 
   App.Router.map(function() {
-    this.resource('details');
+    this.resource('wedding');
+    this.resource('reception');
     this.resource('listings');
-    this.resource('register');
   });
 
   App.ListingsView = Ember.View.extend({
@@ -93,3 +94,4 @@
   });
 
 })();
+
