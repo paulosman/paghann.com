@@ -1,0 +1,109 @@
+// =============================================================================
+// SHARED > SPACING -- MARGINS + PADDING
+// =============================================================================
+// Easily add classes to create margins and padding. Append 2 through 10 to
+// any class to increase the size. Based upon the size set in $spacing
+// examples: .p, .m3, .ptop4, .mleft10
+.pad-horz
+  padding-left:               $spacing
+  padding-right:              $spacing
+.mar-horz
+  margin-left:                $spacing
+  margin-right:               $spacing
+.pad-vert
+  padding-bottom:             $spacing
+  padding-top:                $spacing
+.mar-vert
+  margin-bottom:              $spacing
+  margin-top:                 $spacing
+// Use margins to automatically center horizontally ----------------------------
+// ** Styling must include a width value.
+.mar-horz-center
+  margin-left:                auto
+  margin-right:               auto
+@each $position in '', '-bottom', '-left', '-right', '-top'
+  .pad#{$position}
+    padding#{$position}:      $spacing
+  .mar#{$position}
+    margin#{$position}:       $spacing
+@for $i from 2 through 10
+  .pad-horz-#{$i}
+    padding-left:             $spacing * $i
+    padding-right:            $spacing * $i
+  .mar-horz-#{$i}
+    margin-left:              $spacing * $i
+    margin-right:             $spacing * $i
+  .pad-vert-#{$i}
+    padding-bottom:           $spacing * $i
+    padding-top:              $spacing * $i
+  .mar-vert-#{$i}
+    margin-bottom:            $spacing * $i
+    margin-top:               $spacing * $i
+  @each $position in '', '-bottom', '-left', '-right', '-top'
+    .pad#{$position}-#{$i}
+      padding#{$position}:    $spacing * $i
+    .mar#{$position}-#{$i}
+      margin#{$position}:     $spacing * $i
+
+// Mobile / Small screen over rides --------------------------------------------
+// Use these classes to change margin and padding only on small screens.
+// Also included are clasess ending in "0" to turn off margin/padding totally.
++media-max-width(             $mobile-wide-width)
+  .sm-pad-horz
+    padding-left:             $spacing
+    padding-right:            $spacing
+  .sm-mar-horz
+    margin-left:              $spacing
+    margin-right:             $spacing
+  .sm-pad-vert
+    padding-bottom:           $spacing
+    padding-top:              $spacing
+  .sm-mar-vert
+    margin-bottom:            $spacing
+    margin-top:               $spacing
+  .sm-pad-horz0
+    padding-left:             0
+    padding-right:            0
+  .sm-mar-horz0
+    margin-left:              0
+    margin-right:             0
+  .sm-pad-vert0
+    padding-bottom:           0
+    padding-top:              0
+  .sm-mar-vert0
+    margin-bottom:            0
+    margin-top:               0
+  .sm-mar-horz-center
+    margin-left:              auto
+    margin-right:             auto
+  @each $position in '', '-bottom', '-left', '-right', '-top'
+    .sm-pad#{$position}
+      padding#{$position}:    $spacing
+    .sm-mar#{$position}
+      margin#{$position}:     $spacing
+    .sm-pad#{$position}0
+      padding#{$position}:    0
+    .sm-mar#{$position}0
+      margin#{$position}:     0
+  @for $i from 2 through 10
+    .sm-pad-horz-#{$i}
+      padding-left:           $spacing * $i
+      padding-right:          $spacing * $i
+    .sm-mar-horz-#{$i}
+      margin-left:            $spacing * $i
+      margin-right:           $spacing * $i
+    .sm-pad-vert-#{$i}
+      padding-bottom:         $spacing * $i
+      padding-top:            $spacing * $i
+    .sm-mar-vert-#{$i}
+      margin-bottom:          $spacing * $i
+      margin-top:             $spacing * $i
+    @each $position in '', '-bottom', '-left', '-right', '-top'
+      .sm-pad#{$position}-#{$i}
+        padding#{$position}:  $spacing * $i
+      .sm-mar#{$position}-#{$i}
+        margin#{$position}:   $spacing * $i
+      .sm-pad#{$position}-0
+        padding#{$position}:  0
+      .sm-mar#{$position}-0
+        margin#{$position}:   0

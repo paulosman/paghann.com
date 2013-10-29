@@ -1,0 +1,45 @@
+// =============================================================================
+// BASE > MEDIA QUERIES
+// =============================================================================
+// @media query for screen max-width -------------------------------------------
+=media-max-width(             $max)
+  @media (max-width: $max)
+    @content
+
+// @media query for screen min-width -------------------------------------------
+=media-min-width(             $min)
+  @media (min-width: $min)
+    @content
+
+// @media query for both screen min- and max-widths ----------------------------
+=media-min-max-width(         $min, $max)
+  @media (min-width: $min) and (max-width: $max)
+    @content
+
+// media query for retina-display devices --------------------------------------
+=media-retina
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)
+    @content
+
+// device-specifc media query shortcuts ----------------------------------------
+=media-mobile-tall
+  +media-max-width(           $mobile-tall-width)
+    @content
+
+=media-mobile-wide
+  +media-min-max-width(       $mobile-tall-width + 1, $mobile-wide-width)
+    @content
+
+=media-tablet
+  +media-min-max-width(       $mobile-wide-width + 1, $tablet-width)
+    @content
+
+=media-desktop
+  +media-min-width(           $tablet-width + 1)
+    @content
+
+// anything larger than a phone
+=media-screen
+  +media-min-width(           $mobile-wide-width + 1)
+    @content
+

@@ -1,0 +1,22 @@
+// =============================================================================
+// SHARED > FLOAT + FLOW LAYOUT MODULE
+// =============================================================================
+// Simple formatting to horizontally align content and fill space. A modified
+// version of: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+// The HTML should be laid out in such a way the the "float"-classed element is
+// always first, directly followed by "flow"-classed element. Default appearance
+// is floated content on the left, flow content filling the remaining space.
+// ".float-rev" will flip the order with the "float" content on the right
+// and "flow" content on the left.
+.flow > :last-child
+  margin-bottom:              0
+// ** Only works if on a tablet-sized screen or larger (481+ px)
++media-min-width(             $mobile-wide-width + 1)
+  .flow
+    overflow:                 hidden
+  .float,
+  .float .flow,
+  .float-rev .flow
+    float:                    left
+  .float-rev
+    float:                    right

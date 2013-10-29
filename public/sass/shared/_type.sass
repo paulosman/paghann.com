@@ -1,0 +1,67 @@
+// =============================================================================
+// SHARED > TYPE
+// =============================================================================
+// bootstrap the body color, size, line height, and font -----------------------
+body
+  color:                      $color
+  font-family:                $font-family
+  font-size:                  $font-size
+  line-height:                $line-height
+
+// set the spacing between paragraphs of text ----------------------------------
+p + p,
+p ~ p
+  margin:                     $spacing 0
+
+// Hide text, but still make it accessible to screen readers -------------------
+// see: nicolasgallagher.com/another-css-image-replacement-technique
+.text-hide
+  color:                      transparent
+  font:                       0/0 a
+  overflow:                   hidden
+
+// quickly position text
+.text-center
+  text-align:                 center
+
+.text-left
+  text-align:                 left
+
+.text-right
+  text-align:                 right
+
+// Make the overflow style an ellipsis (...) -----------------------------------
+.text-ellip
+  text-overflow:              ellipsis
+  text-overflow:             -o-ellipsis-lastline
+  overflow:                   hidden
+  white-space:                nowrap
+
+// class-able font sizes -------------------------------------------------------
+.size-1
+  font-size:                  $font-size * 3        //48px
+.size-2
+  font-size:                  $font-size * 2.25     //36px
+.size-3
+  font-size:                  $font-size * 1.75     //28px
+.size-4
+  font-size:                  $font-size * 1.3125   //21px
+.size-5
+  font-size:                  $font-size - 3        //13px
+.size-6
+  font-size:                  $font-size - 5        //11px
+
+// size over rides for mobile --------------------------------------------------
++media-max-width(             $mobile-wide-width)
+  .sm-size-1
+    font-size:                $font-size * 3
+  .sm-size-2
+    font-size:                $font-size * 2.25
+  .sm-size-3
+    font-size:                $font-size * 1.75
+  .sm-size-4
+    font-size:                $font-size * 1.3125
+  .sm-size-5
+    font-size:                $font-size - 3
+  .sm-size-6
+    font-size:                $font-size - 5

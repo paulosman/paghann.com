@@ -1,0 +1,149 @@
+// =============================================================================
+// BASE > NORMALIZE
+// =============================================================================
+*
+  &, &:after, &:before
+    +box-sizing(              border-box)
+
+html
+  -ms-text-size-adjust:       100%
+  -webkit-text-size-adjust:   100%
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small
+  font-size:                  100%
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th
+  font-weight:                normal
+
+b,
+strong
+  font-weight:                bold
+
+a
+  text-decoration:            none
+
+a,
+input,
+textarea
+  outline:                    none
+
+fieldset,
+img
+  border:                     0
+
+body,
+blockquote,
+button,
+dd,
+dl,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+select,
+textarea,
+ul
+  margin:                     0
+
+body,
+button,
+fieldset,
+input,
+ol,
+ul
+  padding:                    0
+
+article,
+footer,
+header,
+img,
+label,
+nav,
+section,
+textarea,
+time
+  display:                    block
+
+form
+  display:                    inline
+
+table
+  border-collapse:            collapse
+  border-spacing:             0
+  width:                      100%
+
+th
+  text-align:                 left
+
+td,
+th
+  vertical-align:             middle
+
+ol,
+ul
+  list-style:                 none
+
+img
+  font-style:                 italic
+  height:                     auto
+  max-width:                  100%
+
+button,
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"],
+label,
+select
+  cursor:                     pointer
+
+button,
+input[type="submit"]
+  -moz-appearance:            button
+  -webkit-appearance:         button
+
+button,
+input,
+option,
+select,
+textarea
+  font-family:                inherit
+  font-size:                  100%
+
+input[type="search"]
+  -moz-appearance:            textfield
+  -webkit-appearance:         textfield
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration
+    -webkit-appearance:       none
+
+textarea
+  overflow:                   auto
+  resize:                     vertical
+  vertical-align:             top
+
+// These have to be kept apart from the larger border and padding
+// resets due to IE weirdness.
+button::-moz-focus-inner,
+input::-moz-focus-inner
+  border:                     0
+  padding:                    0

@@ -1,0 +1,12 @@
+// =============================================================================
+// SHARED > CLEARING FLOATS
+// =============================================================================
+// Clearing floats: SIMPLE -- ** attach to parent that contains floated children
+.clear
+  overflow:                   hidden
+
+// Clearing floats: ROBUST -- ** attach to parent that contains floated children
+.clearfix:after
+  clear:                      both
+  content:                    ''
+  display:                    block

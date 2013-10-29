@@ -1,0 +1,28 @@
+// =============================================================================
+// SHARED > LISTS
+// =============================================================================
+// Create a horizontal set of <li> tags inside any <ol> or <ul> ----------------
+.list-horz
+  font-size:                  0
+  > li
+    display:                  inline-block
+    font-size:                $font-size
+    vertical-align:           top
+
+// Create a horizontal set of <li> tags inside any <ol> or <ul> with table-like
+// properties. This list will stretch to fill its parent and each cell with try
+// to have a consistent width.
+.list-horz-fill
+  display:                    table
+  > li
+    display:                  table-cell
+    vertical-align:           top
+    width:                    1%
+
+// standard numbered list ------------------------------------------------------
+.list-decimal
+  list-style:                 decimal
+
+// standard bullet list --------------------------------------------------------
+.list-disc
+  list-style:                 disc

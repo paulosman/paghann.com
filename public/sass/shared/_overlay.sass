@@ -1,0 +1,30 @@
+// =============================================================================
+// SHARED > OVERLAY LAYOUT
+// =============================================================================
+// Setting up an overlay with horizontally and vertically centered content.
+// ** Needs to be laid out using the following structure:
+// <div class="overlay">
+//   <div class="overlay-inner">
+//     <div class="overlay-wrapper">
+//       {{ CONTENT HERE }}
+//     </div>
+//   </div>
+// </div>
+.overlay
+  bottom:                     0
+  display:                    table
+  height:                     100%
+  left:                       0
+  position:                   fixed
+  right:                      0
+  top:                        0
+  width:                      100%
+
+.overlay-inner
+  display:                    table-cell
+  text-align:                 center
+  vertical-align:             middle
+
+.overlay-wrapper
+  display:                    inline-block
+  text-align:                 left

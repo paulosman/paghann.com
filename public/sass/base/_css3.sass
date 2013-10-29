@@ -1,0 +1,77 @@
+// =============================================================================
+// BASE > CSS3
+// =============================================================================
+=animation(                   $animation)
+  -webkit-animation:          $animation
+  animation:                  $animation
+
+=background-gradient(         $color1, $color2, $direction: vertical, $blend: smooth)
+  // ** $direction:  horizontal | vertical
+  // ** $blend:          smooth | solid
+  background-color:           $color1
+  @if $blend == smooth
+    @if $direction == horizontal
+      background-image:      -webkit-linear-gradient( left,     $color1 0%, $color2 100%)
+      background-image:       linear-gradient(        to right, $color1 0%, $color2 100%)
+    @if $direction == vertical
+      background-image:      -webkit-linear-gradient( top,       $color1 0%, $color2 100%)
+      background-image:       linear-gradient(        to bottom, $color1 0%, $color2 100%)
+  @if $blend == solid
+    @if $direction == horizontal
+      background-image:      -webkit-linear-gradient( left,      $color1 0%, $color1 50%, $color2 50%, $color2 100%)
+      background-image:       linear-gradient(        to right,  $color1 0%, $color1 50%, $color2 50%, $color2 100%)
+    @if $direction == vertical
+      background-image:      -webkit-linear-gradient( top,       $color1 0%, $color1 50%, $color2 50%, $color2 100%)
+      background-image:       linear-gradient(        to bottom, $color1 0%, $color1 50%, $color2 50%, $color2 100%)
+
+=box-sizing(                  $sizing)
+  -moz-box-sizing:            $sizing
+  box-sizing:                 $sizing
+
+=font-face(                   $font-family, $filename, $svg-id, $type: truetype, $style: normal, $weight: normal, $rails: false, $path: '/assets/fonts')
+  $eot-1:                     url('#{$path}/#{$filename}.eot')
+  $eot-2:                     url('#{$path}/#{$filename}.eot?#iefix')       format('embedded-opentype')
+  $woff:                      url('#{$path}/#{$filename}.woff')             format('woff')
+  $ttf:                       url('#{$path}/#{$filename}.ttf')              format('#{$type}')
+  $svg:                       url('#{$path}/#{$filename}.svg##{$svg-id}')   format('svg')
+  // set $rails: true to use the asset pipeline paths,
+  // otherwise specific the route using the $path variable
+  @if $rails == true
+    $eot-1:                   font-url('#{$filename}.eot')
+    $eot-2:                   font-url('#{$filename}.eot?#iefix')           format('embedded-opentype')
+    $woff:                    font-url('#{$filename}.woff')                 format('woff')
+    $ttf:                     font-url('#{$filename}.ttf')                  format('#{$type}')
+    $svg:                     font-url('#{$filename}.svg##{$svg-id}')       format('svg')
+  @font-face
+    font-family:              $font-family
+    font-style:               $style
+    font-weight:              $weight
+    src:                      #{$eot-1}
+    src:                      #{$eot-2}, #{$woff}, unquote("#{$ttf}"), #{$svg}
+
+=keyframes(                   $name)
+  @-webkit-keyframes          #{$name}
+    @content
+  @keyframes                  #{$name}
+    @content
+
+=transform(                   $transform...)
+  -ms-transform:              $transform
+  -webkit-transform:          $transform
+  transform:                  $transform
+
+=transition(                  $transition...)
+  -webkit-transition:         $transition
+  transition:                 $transition
+
+// Easily rotate an element ----------------------------------------------------
+// ** you do not need to specify the "deg" unit when using this mixin.
+=rotate(                      $deg)
+  +transform(                 rotate(#{$deg}deg))
+
+=user-select(                 $select)
+  -webkit-user-select:        $select
+  -moz-user-select:           $select
+  -ms-user-select:            $select
+  user-select:                $select
+
