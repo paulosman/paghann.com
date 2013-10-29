@@ -1,5 +1,5 @@
 (function() {
-  LISTINGS_ENDPOINT = 'http://localhost:4567';
+  LISTINGS_ENDPOINT = 'http://paghann.com/airbnb/';
   AIRBNB_PROPERTY_URL = 'http://airbnb.com/rooms/';
 
   App = Ember.Application.create();
