@@ -2,7 +2,21 @@ body {
   font-family: sans-serif;
 }
 
-.listing img {
+#map img {
   width: 256px;
   height: 170.75px;
+}
+
+#mapContainer {
+  position: relative;
+  height: 900px;
+  width: 80%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
 }
