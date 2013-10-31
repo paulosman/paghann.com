@@ -12,32 +12,72 @@
   </head>
   <body>
 
+
+    <img src="/imgs/logo.png" class="logo mar-horz-center mar-vert-2" alt="The Fabulous Meghann and Paul: Two Nights Only, 2014.">
+
+
     <script type="text/x-handlebars">
       {{ outlet }}
     </script>
 
+
     <script type="text/x-handlebars" id="index">
-      <h1>THE FABULOUS<br />
+      <div class="invite pad mar-horz-center mar-bottom-3 text-center">
+        <div class="grid-3">
+          <div class="cell-3 invite--wedding pad-right sm-pad-right-0 sm-mar-bottom pad-vert sm-pad-bottom-2">
+            <span class="icon-bell size-1 text-center mar-bottom"></span>
+            <h1 class="header-a size-4">The Wedding</h1>
+            <h2 class="header-b invite--sub-title">
+              <span class="size-6">a.k.a.</span>
+              <br>
+              <span class="size-5">"The No Pressure Tour"</span>
+            </h2>
+            <div class="invite--time mar-top-2 mar-horz-3 mar-bottom-3">
+              <time class="invite--time-body">
+              <strong class="header-c">March 8th, 2014</strong>
+              <br>
+              New Orleans, Louisiana
+              </time>
+              <span class="invite--time-start"></span>
+              <span class="invite--time-end"></span>
+            </div>
+            <a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link button button--rvsp pad-vert size-3 mar-horz-3 mar-bottom">RSVP</a>
+            <a href="#/wedding" class="size-5 invite--link">More Info &raquo;</a>
+          </div>
 
-        MEGHANN &amp; PAUL<br />
+          <div class="cell-3 invite--reception pad-left sm-pad-left-0 pad-vert">
+            <span class="icon-glass size-1 text-center mar-bottom"></span>
+            <h1 class="header-a size-4">The Reception</h1>
+            <h2 class="header-b mar-bottom invite--sub-title">
+              <span class="size-6">a.k.a.</span>
+              <br>
+              <span class="size-5">"You Best Be There"</span>
+            </h2>
 
-        TWO NIGHTS ONLY</h1>
+       <div class="invite--time mar-top-2 mar-horz-3 mar-bottom-3">
+              <time class="invite--time-body">
+              <strong class="header-c">April 11, 2014</strong>
+              <br>
+              Toronto, Ontario
+              </time>
+              <span class="invite--time-start"></span>
+              <span class="invite--time-end"></span>
+            </div>
 
-      <div id="boxOne">
-        <h2>THE WEDDING (A.K.A THE NO PRESSURE TOUR)</h2>
-        <p>March 8th, 2014 - New Orleans, LA</p>
-        {{#link-to 'wedding'}}More Info{{/link-to}} |
-        <a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link">RSVP</a>
+
+
+            <a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link button button--rvsp pad-vert size-3 mar-horz-3 mar-bottom">RSVP</a>
+            <a href="#/reception" class="size-5 invite--link">More Info &raquo;</a>
+          </div>
+
+        </div>
       </div>
 
-      <div id="boxTwo">
-        <h2>THE RECEPTION (A.K.A YOU BEST THERE)</h2>
-        <p>April 11, 2014 - Toronto, Ontario</p>
-        {{#link-to 'reception'}}More Info{{/link-to}} | <a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link">RSVP</a>
-      </div>
-
-      <p>Questions? Email paghann@gmail.com</p>
-
+      <p class="text-center mar-vert-2 contact mar-horz-center">
+        <span class="pad-vert pad-horz-2">
+          Questions? Email <a href="mailto:paghann@gmail.com">paghann@gmail.com</a>
+        </span>
+      </p>
 
     </script>
 
@@ -203,11 +243,18 @@
       </p>
     </script>
 
+
+
+
+
     <script src="http://guestlistapp.com/javascripts/guestlist-embed.js"></script>
     <script src="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js"></script>
     <script src="/js/libs/jquery-1.9.1.js"></script>
     <script src="js/libs/handlebars-1.0.0.js"></script>
     <script src="js/libs/ember-1.0.0.js"></script>
     <script src="/js/app.js"></script>
+
+
+
   </body>
 </html>
