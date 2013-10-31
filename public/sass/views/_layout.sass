@@ -1,0 +1,30 @@
+// =============================================================================
+// VIEWS > LAYOUT
+// =============================================================================
+
++media-screen
+  html,
+  body
+    min-height:               100%
+  body
+    background:               url('../imgs/burst.svg') no-repeat center bottom
+    background-attachment:    fixed
+    background-size:          cover
+
++media-max-width(             $mobile-wide-width)
+  .masthead
+    background:               url('../imgs/burst.svg') no-repeat center bottom
+    background-size:          cover
+
+.logo
+  max-width:                  280px
+  +media-screen
+    max-width:                360px
+
+.contact
+  span
+    background-color:         white
+    border-radius:            4px
+    display:                  inline-block
+  a:hover
+    text-decoration:          underline

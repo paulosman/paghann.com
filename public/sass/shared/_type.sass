@@ -13,6 +13,13 @@ p + p,
 p ~ p
   margin:                     $spacing 0
 
+// links -----------------------------------------------------------------------
+a
+  color:                      $red
+
+.no-url
+  cursor:                     pointer
+
 // Hide text, but still make it accessible to screen readers -------------------
 // see: nicolasgallagher.com/another-css-image-replacement-technique
 .text-hide
@@ -65,3 +72,83 @@ p ~ p
     font-size:                $font-size - 3
   .sm-size-6
     font-size:                $font-size - 5
+
+// header styles ---------------------------------------------------------------
+.header-a,
+.header-c,
+.header-d
+  font-family:                $gill-sans
+
+.header-a,
+.header-d
+  text-transform:             uppercase
+
+.header-a
+  letter-spacing:             0.05em
+
+.header-b
+  font-weight:                bold
+  letter-spacing:             0.1em
+  opacity:                    0.85
+
+.header-c
+  font-weight:                normal
+
+.header-d
+  color:                      white
+  line-height:                1.1
+
+// banner headers --------------------------------------------------------------
+.banner
+  position:                   relative
+  z-index:                    1
+
+.banner--body
+  background-color:           $pink
+
+.banner--start,
+.banner--end
+  background-color:           darken($pink, 7%)
+  position:                   absolute
+  z-index:                   -1
+  &:before
+    border:                   solid transparent
+    content:                  ''
+    display:                  block
+    height:                   0
+    position:                 absolute
+    width:                    0
+
+.banner--start
+  left:                      -41px
+  &:before
+    left:                     0
+
+.banner--end
+  right:                     -41px
+  &:before
+    right:                    0
+
+// double line headers ---------------------------------------------------------
+.strike--body
+  background-color:           white
+  display:                    inline-block
+  position:                   relative
+  z-index:                    2
+.strike
+  position:                   relative
+  &:before,
+  &:after
+    content:                  ''
+    display:                  block
+    height:                   0
+    left:                     0
+    position:                 absolute
+    width:                    100%
+    z-index:                  1
+  &:after
+    border-bottom:            2px solid $blue
+    top:                      17px
+  &:before
+    border-bottom:            1px solid $blue
+    top:                      14px

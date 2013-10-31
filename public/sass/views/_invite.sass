@@ -1,0 +1,97 @@
+// =============================================================================
+// VIEWS > INDEX
+// =============================================================================
+
+.invite
+  background-color:           $blue-dark
+  border:                     4px solid white
+  color:                      white
+  max-width:                  640px
+  .header-a
+    color:                    black
+    &:before, &:after
+      color:                  white
+      content:                '\2605'
+      font-size:              18px
+      position:               relative
+      top:                   -4px
+    &:before
+      padding-right:          8px
+    &:after
+      padding-left:           8px
+
+.invite--sub-title
+  line-height:                1.15
+  margin-top:                -6px
+
+
+.invite--link
+  border-bottom:              1px solid
+  color:                      white
+  padding-bottom:             1px
+  position:                   relative
+  top:                       -1px
+  &:hover
+    border-bottom:            0
+
+.invite--ornament
+  background-color:           white
+  border-radius:              130px
+  color:                      black
+  height:                     100px
+  line-height:                100px
+  width:                      100px
+
+.anchor
+  display:                    inline-block
+  height:                     11px
+  position:                   relative
+  width:                      11px
+  &,
+  [class^="icon-"],
+  [class*=" icon-"]
+    line-height:              0
+  [class^="icon-"],
+  [class*=" icon-"]
+    position:                 absolute
+
+.invite--time-body
+  height:                     60px
+  line-height:                1.3
+  padding-top:                8px
+
+.invite--time
+  .banner--start,
+  .banner--end
+    height:                   60px
+    top:                      10px
+    width:                    80px
+    &:before
+      border-width:           34px
+      top:                   -4px
+  .banner--start:before
+    border-left-color:        $blue-dark
+  .banner--end:before
+    border-right-color:       $blue-dark
+
+.invite--wedding
+  border-bottom:              2px dashed white
+  .anchor
+    +animation(               bell 2.5s linear infinite alternate both)
+    top:                     -27px
+  [class^="icon-"],
+  [class*=" icon-"]
+    left:                    -17px
+    top:                      33px
+  +media-screen
+    border-bottom:            0
+    border-right:             2px dashed white
+
+.invite--reception
+  .anchor
+    +animation(               glass 10s 4s linear infinite normal both)
+    top:                      28px
+  [class^="icon-"],
+  [class*=" icon-"]
+    left:                    -18px
+    top:                     -23px

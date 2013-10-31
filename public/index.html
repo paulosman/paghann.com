@@ -1,72 +1,83 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Meghann & Paul - Two Nights Only</title>
+    <title>Meghann & Paul &mdash; Two Nights Only</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="/css/application.css">
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css">
   </head>
   <body>
 
-
-    <img src="/imgs/logo.png" class="logo mar-horz-center mar-vert-2" alt="The Fabulous Meghann and Paul: Two Nights Only, 2014.">
-
+    <header class="masthead">
+      <a href="/"><img src="/imgs/logo.png" class="logo mar-horz-center pad-vert-2" alt="The Fabulous Meghann and Paul: Two Nights Only, 2014."></a>
+    </header>
 
     <script type="text/x-handlebars">
       {{ outlet }}
     </script>
 
-
     <script type="text/x-handlebars" id="index">
-      <div class="invite pad mar-horz-center mar-bottom-3 text-center">
+
+      <div class="invite mar-horz-center mar-bottom-3 pad text-center">
         <div class="grid-3">
-          <div class="cell-3 invite--wedding pad-right sm-pad-right-0 sm-mar-bottom pad-vert sm-pad-bottom-2">
-            <span class="icon-bell size-1 text-center mar-bottom"></span>
+          <div class="invite--wedding cell-3 pad-right pad-vert sm-mar-bottom sm-pad-right-0 sm-pad-bottom-2">
+
+            <div class="invite--ornament mar-horz-center mar-bottom text-center">
+              <div class="anchor">
+                <span class="icon-bell size-1 text-center"></span>
+              </div>
+            </div>
+
             <h1 class="header-a size-4">The Wedding</h1>
-            <h2 class="header-b invite--sub-title">
+            <h2 class="invite--sub-title header-b">
               <span class="size-6">a.k.a.</span>
               <br>
               <span class="size-5">"The No Pressure Tour"</span>
             </h2>
-            <div class="invite--time mar-top-2 mar-horz-3 mar-bottom-3">
-              <time class="invite--time-body">
-              <strong class="header-c">March 8th, 2014</strong>
-              <br>
-              New Orleans, Louisiana
+            <div class="invite--time mar-top-2 mar-horz-3 mar-bottom-3 banner">
+              <time class="invite--time-body banner--body">
+                <strong class="header-c">March 8th, 2014</strong>
+                <br>
+                New Orleans, Louisiana
               </time>
-              <span class="invite--time-start"></span>
-              <span class="invite--time-end"></span>
+              <span class="banner--start"></span>
+              <span class="banner--end"></span>
             </div>
-            <a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link button button--rvsp pad-vert size-3 mar-horz-3 mar-bottom">RSVP</a>
+            <a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link button button--rvsp pad-vert size-3 mar-horz-3 mar-bottom no-url">
+              RSVP
+            </a>
             <a href="#/wedding" class="size-5 invite--link">More Info &raquo;</a>
           </div>
 
-          <div class="cell-3 invite--reception pad-left sm-pad-left-0 pad-vert">
-            <span class="icon-glass size-1 text-center mar-bottom"></span>
+          <div class="invite--reception cell-3 pad-left sm-pad-left-0 pad-vert">
+
+            <div class="invite--ornament mar-horz-center mar-bottom text-center">
+              <div class="anchor">
+                <span class="icon-glass size-1 text-center"></span>
+              </div>
+            </div>
             <h1 class="header-a size-4">The Reception</h1>
-            <h2 class="header-b mar-bottom invite--sub-title">
+            <h2 class="invite--sub-title header-b mar-bottom">
               <span class="size-6">a.k.a.</span>
               <br>
               <span class="size-5">"You Best Be There"</span>
             </h2>
-
-       <div class="invite--time mar-top-2 mar-horz-3 mar-bottom-3">
-              <time class="invite--time-body">
-              <strong class="header-c">April 11, 2014</strong>
-              <br>
-              Toronto, Ontario
+            <div class="invite--time mar-top-2 mar-horz-3 mar-bottom-3 banner">
+              <time class="invite--time-body banner--body">
+                <strong class="header-c">April 11, 2014</strong>
+                <br>
+                Toronto, Ontario
               </time>
-              <span class="invite--time-start"></span>
-              <span class="invite--time-end"></span>
+              <span class="banner--start"></span>
+              <span class="banner--end"></span>
             </div>
 
-
-
-            <a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link button button--rvsp pad-vert size-3 mar-horz-3 mar-bottom">RSVP</a>
+            <a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link button button--rvsp pad-vert size-3 mar-horz-3 mar-bottom no-url">
+              RSVP
+            </a>
             <a href="#/reception" class="size-5 invite--link">More Info &raquo;</a>
           </div>
 
@@ -82,170 +93,217 @@
     </script>
 
     <script type="text/x-handlebars" id="listings">
-      <h1>Listings</h1>
-      <div id="mapContainer">
-        <div id="map"></div>
+      <div class="content mar-horz-center pad-3 mar-bottom">
+        <h1 class="size-4 header-a strike text-center mar-bottom-2">
+          <span class="strike--body mar-horz-center pad-horz-2">
+            AirBnB Map
+          </span>
+        </h1>
+        <div id="mapContainer">
+          <div id="map"></div>
+        </div>
       </div>
     </script>
 
     <script type="text/x-handlebars" id="wedding">
-      <h1>This won&#8217;t exactly be the week of Lent...</h1>
-      <p>
-        First off, we&#8217;d like to commend you on your bravery for clicking this
-        link. We realize New Orleans is a long haul for most of you, and we&#8217;re
-        chuffed that you&#8217;d consider going the distance for our nuptials (and
-        the bourbon shower that ensues - we know your M.O as well as you know
-        us).
-      </p>
-      <p>
-        Below is every conceivable detail that you need to know for making
-        plans for the date. Whenever you&#8217;ve reached a verdict, please remember
-        to RSVP so that we&#8217;re ready for you.
-      </p>
+      <div class="content mar-horz-center pad-3 mar-bottom">
 
-      <h3>THE WHEN:</h3>
+        <header class="banner content--header mar-bottom-4">
+          <h1 class="size-2 sm-size-3 text-center pad-vert pad-horz-2  mar-horz-2  banner--body header-d">
+            This won&#8217;t exactly be the week of Lent&hellip;
+          </h1>
+          <span class="banner--start"></span>
+          <span class="banner--end"></span>
+        </header>
 
-      <p>
-        We&#8217;ll be getting married on Saturday March 8th, 2013 with
-        festivities starting around 2pm. We suggest you arrive for
-        Friday evening and stay until Sunday evening at a minimum, as
-        we&#8217;ll be coordinating meals, excursions to clubs and general
-        group revelry throughout the weekend.
-      </p>
+        <p class="size-4">
+          <em>
+            First off, we&#8217;d like to commend you on your bravery for clicking this
+            link. We realize New Orleans is a long haul for most of you, and we&#8217;re
+            chuffed that you&#8217;d consider going the distance for our nuptials (and
+            the bourbon shower that ensues &mdash; we know your M.O as well as you know
+            us).
+          </em>
+        </p>
+        <p>
+          Below is every conceivable detail that you need to know for making
+          plans for the date. Whenever you&#8217;ve reached a verdict, please remember
+          to RSVP so that we&#8217;re ready for you.
+        </p>
 
-      <h3>THE WHERE:</h3>
+        <h2 class="size-4 header-a mar-top-3 text-center strike">
+          <span class="strike--body mar-horz-center pad-horz-2">
+            THE WHEN
+          </span>
+        </h2>
 
-      <p>
-        We&#8217;re getting hitched poolside at Maison De Macarty in The Bywater.
-      </p>
+        <p>
+          We&#8217;ll be getting married on <strong>Saturday March 8th, 2013</strong> with
+          festivities starting around <strong>2pm</strong>. We suggest you arrive for
+          Friday evening and stay until Sunday evening at a minimum, as
+          we&#8217;ll be coordinating meals, excursions to clubs and general
+          group revelry throughout the weekend.
+        </p>
 
-      <p>
-        We&#8217;ve already booked out the house for the weekend, but Paul
-        has employed his web wizardry to build you an {{#link-to 'listings'}}AirBnb map{{/link-to}} so
-        you can find the perfect abode in areas we&#8217;ve pre-screened for
-        you.
-      </p>
+        <h2 class="size-4 header-a mar-top-3 text-center strike">
+          <span class="strike--body mar-horz-center pad-horz-2">
+            THE WHERE
+          </span>
+        </h2>
 
-      <p>
-        Alternately, try searching Kayak or Priceline for affordable
-        hotel rates. Here&#8217;s a map so you can plot your travel
-        distance, but keep in mind that taxi&#8217;s in the crescent city
-        are ridiculously affordable.
-      </p>
+        <p>
+          We&#8217;re getting hitched poolside at <strong>Maison De Macarty in The Bywater</strong>.
+        </p>
 
-      <p>
-        Also keep in mind that the cheapest flights are usually posted
-        8 weeks in advance (so 2nd week of January) and the best
-        booking dates are Tuesday night through Thursday night. Bonne
-        chance!
-      </p>
+        <img src="imgs/venue.jpg" class="float mar-right-3 sm-mar-horz-center" width="180">
 
-      <h3>THE LOLWUT?:</h3>
+        <p>
+          We&#8217;ve already booked out the house for the weekend, but Paul
+          has employed his web wizardry to build you an {{#link-to 'listings'}}<strong>AirBnb map</strong>{{/link-to}} so
+          you can find the perfect abode in areas we&#8217;ve pre-screened for
+          you.
+        </p>
 
-      <p>
-        Look, we don&#8217;t have every detail hammered out just yet (out of
-        sloth) - but we&#8217;re both event planners by vocation, so just
-        put your little hand in ours and we&#8217;ll contact you via the
-        mailing list after you RSVP with more need-to-knows, meet-ups
-        and restaurant locations etc. as we inch towards the date.
-      </p>
+        <p>
+          Alternately, try searching <em>Kayak</em> or <em>Priceline</em> for affordable
+          hotel rates.
 
-      <p>
-        Ready? Super (we&#8217;re not!) - go ahead and <a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link">RSVP</a>.
-      </p>
+          <!-- Here&#8217;s a map so you can plot your travel
+          distance, but keep in mind that taxi&#8217;s in the crescent city
+          are ridiculously affordable. -->
+        </p>
+
+        <p>
+          Also keep in mind that the cheapest flights are usually posted
+          8 weeks in advance (so 2nd week of January) and the best
+          booking dates are Tuesday night through Thursday night. Bonne
+          chance!
+        </p>
+
+        <h2 class="size-4 header-a mar-top-3 text-center strike">
+          <span class="strike--body mar-horz-center pad-horz-2">
+            THE LOLWUT
+          </span>
+        </h2>
+
+        <p>
+          Look, we don&#8217;t have every detail hammered out just yet (out of
+          sloth) &mdash; but we&#8217;re both event planners by vocation, so just
+          put your little hand in ours and we&#8217;ll contact you via the
+          mailing list after you RSVP with more need-to-knows, meet-ups
+          and restaurant locations etc. as we inch towards the date.
+        </p>
+
+        <p class="text-center size-4 pad-2 content--footer mar-top-4">
+          <strong>
+            Ready? Super (we&#8217;re not!) &mdash; go ahead and <a title="Wedding in New Orleans" class="guestlist-event-203457 guestlist-link no-url button button--action pad-horz-2">RSVP</a>
+          </strong>
+        </p>
+
+      </div>
+
     </script>
 
     <script type="text/x-handlebars" id="reception">
-      <h1>There will be bisquick.</h1>
+      <div class="content mar-horz-center pad-3 mar-bottom">
 
-      <p>FAQ for the locals (you know who you are):</p>
+        <header class="banner content--header mar-bottom-4">
+          <h1 class="size-2 sm-size-3 text-center pad-vert pad-horz-2  mar-horz-2  banner--body header-d">
+            <span><span>There will be bisquick.</span></span>
+          </h1>
+          <span class="banner--start"></span>
+          <span class="banner--end"></span>
+        </header>
 
-      <ul>
-        <li>
-          Show up at The Extension Room (30 Eastern Ave, Toronto) at
-          7pm on April 11th. Come hungry and thirsty - you know what
+        <h2 class="size-4 header-a mar-bottom text-center strike">
+          <span class="strike--body mar-horz-center pad-horz-2">
+            FAQ for the locals
+            <span class="size-5">(you know who you are)</span>
+          </span>
+        </h2>
+
+        <p>
+          Show up at <strong>The Extension Room (30 Eastern Ave, Toronto) at
+          7pm on April 11th</strong>. Come hungry and thirsty &mdash; you know what
           to expect from us by now, but if you have any questions,
           read on.
-        </li>
-      </ul>
+        </p>
 
-      <p>FAQ for the Out-of-Towners (ditto):</p>
+        <h2 class="size-4 header-a mar-top-3 strike text-center">
+          <span class="strike--body mar-horz-center pad-horz-2">
+            FAQ for the Out-of-Towners
+            <span class="size-5">(ditto)</span>
+          </span>
+        </h2>
 
-      <ul>
-        <li>
+        <p>
           The Extension Room is a pretty cool dance studio located at
-          30 Eastern Ave in downtown Toronto. Ample parking is
-          available in the area (both on the street and in zoned lots)
-          and you can grab all the driving directions you need by
-          clicking on the map below:
-        </li>
-      </ul>
+          <strong>30 Eastern Ave</strong> in downtown Toronto. Ample parking is
+          available in the area (both on the street and in zoned lots.)
 
-      <ul>
-        <li>
+          <!-- and you can grab all the driving directions you need by
+          clicking on the map below: -->
+
+        </p>
+        <p>
           As additional methods of transport, Go Trains run from
           Burlington and all stations westbound from there every hour
           if you want to save yourselves the hassle. You can also
           check out a hotel directory for the evening here.
-        </li>
-        <li>
+        </p>
+        <p>
           We&#8217;ll be serving southern food (everything from savoury hush
           puppies and gulf oysters to pecan pies and sweet teas)
           earlier in the evening, and we&#8217;ll have lots of
           americana-inspired drinks served by very lovely staff (and
           possibly a rogue bartending bride).
-        </li>
-
-        <li>
-          Dress code is southern charmer- if you want to play it safe,
+        </p>
+        <p>
+          <strong>Dress code is southern charmer</strong> &mdash; if you want to play it safe,
           dress for business casual or cocktail party. If you want to
           come in a white suit with a kentucky knot tie or as a cast
           member of Designing Women, you&#8217;re basically our favourite
           person. If you come in a hoodie and jeans, we still love
           you.
-        </li>
-
-        <li>
+        </p>
+        <p>
           This is world&#8217;s colliding, so expect a diverse group of
-          goodkind folk. Relatives take note: you&#8217;re going to hear the
-          words "Ruby on Rails", "Javascript MVC", "Functional
-          Programming" and "Object Relational Mappers" - asking more
+          goodkind folk. <strong>Relatives take note:</strong> you&#8217;re going to hear the
+          words "<em>Ruby on Rails</em>", "<em>Javascript MVC</em>", "<em>Functional
+          Programming</em>" and "<em>Object Relational Mappers</em>" &mdash; asking more
           questions out of curiosity or rolling your eyes are both
           appropriate responses.
-        </li>
-
-        <li>
+        </p>
+        <p>
           You&#8217;re probably going to get an earful of early jazz meets
           60&#8217;s garage meets 90&#8217;s alternative. Deal with it.
-        </li>
-
-        <li>
+        </p>
+        <p>
           Finally, we love that you&#8217;re coming out to celebrate with
-          us. Please, no gifts! If you are wonderful and stubborn, a
+          us. <strong>Please, no gifts!</strong> If you are wonderful and stubborn, a
           charitable donation to an institution of your choice would
           be absolutely lovely. Three of our favourites are:
-        </li>
-      </ul>
-      <ul>
-        <li><a href="http://www.vocpri.ca/" target="_blank">CPRI (Child and Parent Resource Institute, London)</a></li>
-        <li><a href="https://secure2.unxvision.com/SLF/eDonation/index.asp?DONATION_FORM_ID=16" target="_blank">The Stephen Lewis Foundation</a></li>
-        <li><a href="http://www.actoronto.org/home.nsf/pages/donate" target="_blank">ACT (AIDS Committee of Toronto)</a></li>
-      </ul>
+        </p>
 
-      <p>
-        Any other need-to-knows will be sent to you via email before the event
-        - please RSVP so that we have your email address on ﬁle and can count
-        your pretty head!
-      </p>
+        <ul class="list-disc mar-left-3 mar-bottom-2">
+          <li><a href="http://www.vocpri.ca/" target="_blank">CPRI (Child and Parent Resource Institute, London)</a></li>
+          <li><a href="https://secure2.unxvision.com/SLF/eDonation/index.asp?DONATION_FORM_ID=16" target="_blank">The Stephen Lewis Foundation</a></li>
+          <li><a href="http://www.actoronto.org/home.nsf/pages/donate" target="_blank">ACT (AIDS Committee of Toronto)</a></li>
+        </ul>
 
-      <p>
-        Y&#8217;all ready? Go ahead and <a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link">RSVP</a>.
-      </p>
+        <p>
+          Any other need-to-knows will be sent to you via email before the event
+          &mdash; please RSVP so that we have your email address on ﬁle and can count
+          your pretty head!
+        </p>
+
+        <p class="text-center size-4 pad-2 content--footer mar-top-4">
+          <strong>
+            Y&#8217;all ready? Go ahead and <a title="Reception in Toronto" class="guestlist-event-203466 guestlist-link no-url button button--action pad-horz-2">RSVP</a>
+          </strong>
+        </p>
+      </div>
     </script>
-
-
-
-
 
     <script src="http://guestlistapp.com/javascripts/guestlist-embed.js"></script>
     <script src="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js"></script>
@@ -253,8 +311,5 @@
     <script src="js/libs/handlebars-1.0.0.js"></script>
     <script src="js/libs/ember-1.0.0.js"></script>
     <script src="/js/app.js"></script>
-
-
-
   </body>
 </html>

@@ -1,4 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Carter+One);
+@font-face {
+  font-family: font-awesome;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg"); }
+
+@font-face {
+  font-family: gill-sans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/gill-sans-mt-bold.eot");
+  src: url("../fonts/gill-sans-mt-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gill-sans-mt-bold.woff") format("woff"), url("../fonts/gill-sans-mt-bold.ttf") format("truetype"), url("../fonts/gill-sans-mt-bold.svg#gill") format("svg"); }
+
 *, *:after, *:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -1387,17 +1400,6 @@ input::-moz-focus-inner {
 
   .sm-mar-top-0 {
     margin-top: 0; } }
-.hidden {
-  display: none; }
-
-.clear {
-  overflow: hidden; }
-
-.clearfix:after {
-  clear: both;
-  content: "";
-  display: block; }
-
 .flow > :last-child {
   margin-bottom: 0; }
 
@@ -1421,6 +1423,12 @@ body {
 p + p,
 p ~ p {
   margin: 12px 0; }
+
+a {
+  color: #ed1c24; }
+
+.no-url {
+  cursor: pointer; }
 
 .text-hide {
   color: transparent;
@@ -1478,6 +1486,84 @@ p ~ p {
 
   .sm-size-6 {
     font-size: 11px; } }
+.header-a,
+.header-c,
+.header-d {
+  font-family: gill-sans, cambria, georgia, serif; }
+
+.header-a,
+.header-d {
+  text-transform: uppercase; }
+
+.header-a {
+  letter-spacing: 0.05em; }
+
+.header-b {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  opacity: 0.85; }
+
+.header-c {
+  font-weight: normal; }
+
+.header-d {
+  color: white;
+  line-height: 1.1; }
+
+.banner {
+  position: relative;
+  z-index: 1; }
+
+.banner--body {
+  background-color: #f35a61; }
+
+.banner--start,
+.banner--end {
+  background-color: #f03941;
+  position: absolute;
+  z-index: -1; }
+  .banner--start:before,
+  .banner--end:before {
+    border: solid transparent;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0; }
+
+.banner--start {
+  left: -41px; }
+  .banner--start:before {
+    left: 0; }
+
+.banner--end {
+  right: -41px; }
+  .banner--end:before {
+    right: 0; }
+
+.strike--body {
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  z-index: 2; }
+
+.strike {
+  position: relative; }
+  .strike:before, .strike:after {
+    content: "";
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1; }
+  .strike:after {
+    border-bottom: 2px solid #a0cbed;
+    top: 17px; }
+  .strike:before {
+    border-bottom: 1px solid #a0cbed;
+    top: 14px; }
+
 .list-horz {
   font-size: 0; }
   .list-horz > li {
@@ -1505,31 +1591,52 @@ p ~ p {
   user-select: none;
   display: inline-block;
   position: relative;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-decoration: none !important; }
 
-.icon {
-  background-repeat: no-repeat;
-  display: inline-block; }
+.button--rvsp,
+.button--action {
+  border-radius: 5px; }
+  .button--rvsp:hover,
+  .button--action:hover {
+    top: 1px; }
+
+.button--rvsp {
+  -webkit-transition: background-color ease-in 0.3s;
+  transition: background-color ease-in 0.3s;
+  background-color: white;
+  border-bottom: 2px solid #2376b8;
+  border-top: 1px solid transparent;
+  color: #3590d9;
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1); }
+  .button--rvsp:hover {
+    border-bottom-color: #3590d9;
+    border-top-color: #2376b8;
+    box-shadow: inset 0 3px 7px -3px rgba(0, 0, 0, 0.7); }
+
+.button--action {
+  background-color: #ed1c24;
+  color: white !important;
+  font-weight: normal; }
+  .button--action:hover {
+    background-color: #d01018; }
 
 [class^="icon-"],
 [class*=" icon-"] {
-  position: relative;
-  display: inline-block;
-  font-family: font-awesome;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  font-family: font-awesome;
+  display: inline-block;
+  position: relative; }
 
 .icon-bell:before {
   content: "\f0f3"; }
 
 .icon-glass:before {
   content: "\f000"; }
-
-fieldset .flow {
-  padding-left: 1px; }
-
-.flow input, .flow select, .flow textarea {
-  width: 100%; }
 
 @media (min-width: 481px) {
   [class^="grid-"],
@@ -1571,187 +1678,220 @@ fieldset .flow {
   .grid-4 .cell-2,
   .grid-3 .cell-3 {
     width: 50%; } }
-.overlay {
-  bottom: 0;
-  display: table;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%; }
+@-webkit-keyframes bell {
+  0% {
+    -ms-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
 
-.overlay-inner {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle; }
+  100% {
+    -ms-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg); } }
 
-.overlay-wrapper {
-  display: inline-block;
-  text-align: left; }
+@keyframes bell {
+  0% {
+    -ms-transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg); }
 
-a {
-  color: #ed1c24; }
+  100% {
+    -ms-transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg); } }
 
-@font-face {
-  font-family: font-awesome;
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg"); }
+@-webkit-keyframes glass {
+  10% {
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg); }
 
-@font-face {
-  font-family: gill-sans;
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/gill-sans-mt-bold.eot");
-  src: url("../fonts/gill-sans-mt-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gill-sans-mt-bold.woff") format("woff"), url("../fonts/gill-sans-mt-bold.ttf") format("truetype"), url("../fonts/gill-sans-mt-bold.svg#gill") format("svg"); }
+  15% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
 
-body, html {
-  height: 100%;
-  width: 100%; }
+@keyframes glass {
+  10% {
+    -ms-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg); }
 
-body {
-  background: url("../imgs/burst.svg") no-repeat center bottom;
-  background-size: cover;
-  background-attachment: fixed; }
-  @media (max-width: 320px) {
-    body {
-      background-attachment: scroll;
-      background-position: center top; } }
-  @media (min-width: 321px) and (max-width: 480px) {
-    body {
-      background-position: left bottom; } }
+  15% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@media (min-width: 481px) {
+  html,
+  body {
+    min-height: 100%; }
+
+  body {
+    background: url("../imgs/burst.svg") no-repeat center bottom;
+    background-attachment: fixed;
+    background-size: cover; } }
+@media (max-width: 480px) {
+  .masthead {
+    background: url("../imgs/burst.svg") no-repeat center bottom;
+    background-size: cover; } }
+.logo {
+  max-width: 280px; }
+  @media (min-width: 481px) {
+    .logo {
+      max-width: 360px; } }
 
 .contact span {
-  background: white;
+  background-color: white;
   border-radius: 4px;
   display: inline-block; }
-
-.logo {
-  max-width: 360px;
-  z-index: 2;
-  position: relative; }
-  @media (max-width: 320px) {
-    .logo {
-      max-width: 280px; } }
+.contact a:hover {
+  text-decoration: underline; }
 
 .invite {
-  max-width: 640px;
   background-color: #3590d9;
+  border: 4px solid white;
   color: white;
-  border: 4px solid white; }
+  max-width: 640px; }
   .invite .header-a {
     color: black; }
     .invite .header-a:before, .invite .header-a:after {
-      content: "\2605";
       color: white;
+      content: "\2605";
+      font-size: 18px;
       position: relative;
-      top: -4px;
-      font-size: 18px; }
+      top: -4px; }
     .invite .header-a:before {
       padding-right: 8px; }
     .invite .header-a:after {
       padding-left: 8px; }
-  .invite [class^="icon-"],
-  .invite [class*=" icon-"] {
-    background-color: white;
-    color: black;
-    border-radius: 130px;
-    line-height: 1;
-    width: 100px;
-    height: 100px;
-    line-height: 100px; }
-
-.invite--time {
-  position: relative;
-  z-index: 1; }
-
-.invite--time-body {
-  background-color: #f35a61;
-  height: 60px;
-  padding-top: 8px;
-  line-height: 1.3; }
-
-.invite--time-start,
-.invite--time-end {
-  position: absolute;
-  top: 10px;
-  background-color: #f03941;
-  height: 60px;
-  width: 80px;
-  z-index: -1; }
-  .invite--time-start:before,
-  .invite--time-end:before {
-    content: "";
-    display: block;
-    top: -4px;
-    width: 0;
-    height: 0;
-    border: 34px solid transparent;
-    position: absolute; }
-
-.invite--time-start {
-  left: -41px; }
-  .invite--time-start:before {
-    left: 0;
-    border-left-color: #3590d9; }
-
-.invite--time-end {
-  right: -41px; }
-  .invite--time-end:before {
-    right: 0;
-    border-right-color: #3590d9; }
-
-.invite--wedding {
-  border-bottom: 2px dashed white; }
-  @media (min-width: 481px) {
-    .invite--wedding {
-      border-right: 2px dashed white;
-      border-bottom: 0; } }
 
 .invite--sub-title {
   line-height: 1.15;
   margin-top: -6px; }
 
-.header-a,
-.header-c {
-  font-family: gill-sans, cursive; }
-
-.header-a {
-  letter-spacing: 0.05em;
-  text-transform: uppercase; }
-
-.header-b {
-  font-weight: bold;
-  opacity: 0.85;
-  letter-spacing: 0.1em; }
-
-.header-c {
-  font-weight: normal; }
-
-.button--rvsp {
-  background-color: white;
-  color: #3590d9;
-  font-weight: bold;
-  border-radius: 5px;
-  border-bottom: 2px solid #2376b8;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  display: block;
-  line-height: 1;
-  -webkit-transition: background-color ease-in 0.3s;
-  transition: background-color ease-in 0.3s; }
-  .button--rvsp:hover {
-    background-color: rgba(255, 255, 255, 0.85);
-    border-bottom-color: #3590d9;
-    top: 1px; }
-
 .invite--link {
-  color: white;
   border-bottom: 1px solid;
+  color: white;
   padding-bottom: 1px;
   position: relative;
   top: -1px; }
   .invite--link:hover {
     border-bottom: 0; }
+
+.invite--ornament {
+  background-color: white;
+  border-radius: 130px;
+  color: black;
+  height: 100px;
+  line-height: 100px;
+  width: 100px; }
+
+.anchor {
+  display: inline-block;
+  height: 11px;
+  position: relative;
+  width: 11px; }
+  .anchor,
+  .anchor [class^="icon-"],
+  .anchor [class*=" icon-"] {
+    line-height: 0; }
+  .anchor [class^="icon-"],
+  .anchor [class*=" icon-"] {
+    position: absolute; }
+
+.invite--time-body {
+  height: 60px;
+  line-height: 1.3;
+  padding-top: 8px; }
+
+.invite--time .banner--start,
+.invite--time .banner--end {
+  height: 60px;
+  top: 10px;
+  width: 80px; }
+  .invite--time .banner--start:before,
+  .invite--time .banner--end:before {
+    border-width: 34px;
+    top: -4px; }
+.invite--time .banner--start:before {
+  border-left-color: #3590d9; }
+.invite--time .banner--end:before {
+  border-right-color: #3590d9; }
+
+.invite--wedding {
+  border-bottom: 2px dashed white; }
+  .invite--wedding .anchor {
+    -webkit-animation: bell 2.5s linear infinite alternate both;
+    animation: bell 2.5s linear infinite alternate both;
+    top: -27px; }
+  .invite--wedding [class^="icon-"],
+  .invite--wedding [class*=" icon-"] {
+    left: -17px;
+    top: 33px; }
+  @media (min-width: 481px) {
+    .invite--wedding {
+      border-bottom: 0;
+      border-right: 2px dashed white; } }
+
+.invite--reception .anchor {
+  -webkit-animation: glass 10s 4s linear infinite normal both;
+  animation: glass 10s 4s linear infinite normal both;
+  top: 28px; }
+.invite--reception [class^="icon-"],
+.invite--reception [class*=" icon-"] {
+  left: -18px;
+  top: -23px; }
+
+#mapContainer {
+  padding-top: 60%;
+  position: relative; }
+
+#map {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.content {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  max-width: 800px; }
+  .content .header-a {
+    color: #3590d9; }
+  .content a {
+    text-decoration: underline; }
+    .content a:hover {
+      color: #3590d9;
+      text-decoration: none; }
+
+.content--footer {
+  background-color: #a0cbed;
+  border-radius: 3px; }
+
+.content--header .banner--body span {
+  display: table;
+  height: 79px;
+  width: 100%; }
+  .content--header .banner--body span span {
+    display: table-cell;
+    vertical-align: middle; }
+.content--header .banner--start,
+.content--header .banner--end {
+  bottom: -15px;
+  height: 80px;
+  width: 80px; }
+  .content--header .banner--start:before,
+  .content--header .banner--end:before {
+    border-width: 43px;
+    top: -3px; }
+.content--header .banner--start {
+  left: -30px; }
+  .content--header .banner--start:before {
+    border-left-color: white; }
+.content--header .banner--end {
+  right: -30px; }
+  .content--header .banner--end:before {
+    border-right-color: white; }
