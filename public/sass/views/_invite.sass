@@ -24,7 +24,6 @@
   line-height:                1.15
   margin-top:                -6px
 
-
 .invite--link
   border-bottom:              1px solid
   color:                      white
@@ -95,3 +94,11 @@
   [class*=" icon-"]
     left:                    -18px
     top:                     -23px
+
+// weird opera hacks to fix display issue
+_:-o-prefocus,
+.invite--wedding .anchor
+  top:                       -10px
+_:-o-prefocus,
+.invite--reception .anchor
+  top:                        45px

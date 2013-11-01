@@ -1427,6 +1427,10 @@ p ~ p {
 a {
   color: #ed1c24; }
 
+_:-o-prefocus,
+a {
+  text-decoration: none !important; }
+
 .no-url {
   cursor: pointer; }
 
@@ -1843,6 +1847,14 @@ a {
   left: -18px;
   top: -23px; }
 
+_:-o-prefocus,
+.invite--wedding .anchor {
+  top: -10px; }
+
+_:-o-prefocus,
+.invite--reception .anchor {
+  top: 45px; }
+
 #mapContainer {
   padding-top: 60%;
   position: relative; }
@@ -1854,8 +1866,10 @@ a {
   right: 0;
   top: 0; }
   #map img {
-    width: 256px;
-    height: 170.75px; }
+    border: 0;
+    height: 170.75px;
+    padding: 0;
+    width: 256px; }
 
 .content {
   background-color: white;
@@ -1874,6 +1888,9 @@ a {
     .content a:hover {
       color: #3590d9;
       text-decoration: none; }
+  .content img {
+    border: 1px solid #e6e6e6;
+    padding: 1px; }
 
 .content--footer {
   background-color: #a0cbed;
